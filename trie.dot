@@ -1,37 +1,33 @@
-// to compile this try dot trie.dot -T png -o trie.png
-
-// don't forget to pipe this to a file :)
-
 digraph {
     a [label=""];
-    b [label="a"];
-    c [label="p"];
-    d [label="p"];
-    e [label="l"];
-    f [label="e", shape=box];
-    g [label="e", shape=box];
-    h [label="o"];
-    i [label="r", shape=box];
-    j [label="a"];
-    k [label="n"];
-    l [label="g"];
-    m [label="e", shape=box];
-    n [label="p"];
-    o [label="p"];
-    p [label="a", shape=box];
+    b [label="O"];
+    c [label="R", shape=box];
+    d [label="A"];
+    e [label="N"];
+    f [label="G"];
+    g [label="E", shape=box];
+    h [label="P"];
+    i [label="P"];
+    j [label="A", shape=box];
+    k [label="A"];
+    l [label="P"];
+    m [label="P"];
+    n [label="L"];
+    o [label="E", shape=box];
+    p [label="E", shape=box];
+    f -> g;
     e -> f;
     d -> e;
     c -> d;
-    c -> g;
     b -> c;
-    a -> b;
-    l -> m;
-    k -> l;
-    j -> k;
     i -> j;
     h -> i;
-    o -> p;
+    b -> h;
+    a -> b;
     n -> o;
-    h -> n;
-    a -> h;
+    m -> n;
+    l -> m;
+    l -> p;
+    k -> l;
+    a -> k;
 }
