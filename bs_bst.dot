@@ -1,0 +1,13 @@
+digraph {
+    a [label="OR"];
+    b [label="OPPA"];
+    c [label="APPLE"];
+    d [label="APE"];
+    e [label="OPERA"];
+    f [label="ORANGE"];
+    c -> d
+    c -> e
+    b -> c
+    a -> b
+    a -> f
+}

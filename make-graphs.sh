@@ -13,6 +13,11 @@ dot trie.dot -T png -o trie.png
 python3 rtree-from-file.py basicstrings > bs_rt.dot
 dot bs_rt.dot -T png -o bs_rt.png
 
+# basic BST example
+python3 bst-from-file.py basicstrings > bs_bst.dot
+dot bs_bst.dot -T png -o bs_bst.png
+
 xdg-open trie.png
 xdg-open bs_rt.png
+xdg-open bs_bst.png
 # xdg-open coc_trie.svg
