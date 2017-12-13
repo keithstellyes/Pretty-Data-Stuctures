@@ -1,0 +1,8 @@
+digraph {
+    a [label="1"];
+    b [label="2"];
+    c [label="3"];
+    d [label="4"];
+    a -> b;
+    c -> d;
+}
