@@ -29,13 +29,17 @@ class GraphVizTree:
         self.declarations.append(out + '];')
         return node_name
 
-    def add_edge(self, nodes, directed=False):
+    def add_edge(self, nodes, directed=False, label=None):
         line = None
         if directed:
             line = ' -> '
         else:
             line = ' -- '
-        self.edges.append('    ' + line.join(nodes) + ';')
+        
+        edge = '    ' + line.join(nodes)
+        if label is not None:
+            edge += ' [label="{}"]'.format(str(label))
+        self.edges.append(edge)
 
     def gv_serialize(self):
         return self.output + '\n'.join(self.declarations) + '\n' +\
