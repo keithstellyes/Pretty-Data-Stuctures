@@ -11,3 +11,7 @@ implementing common data structures that can serialize to GraphViz DOT files.
 | Trie (one char per node) |DONE|
 | Zombie Highway Graph from Reddit's r/dailyprogrammer| DONE|
 | Markov Chain | DONE|
+| Hash Table | Done|
+
+AVL Tree insertion via: 
+https://www.geeksforgeeks.org/avl-tree-set-1-insertion/
