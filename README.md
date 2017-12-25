@@ -1,7 +1,6 @@
 This repo was started as evidence and/or learning tool to others, basically,
 implementing common data structures that can serialize to GraphViz DOT files.
 
-|--------------|------|
 |Data structure|Status|
 |--------------|------|
 | Adjacency Graph| DONE|
