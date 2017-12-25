@@ -1,13 +1,12 @@
 # generates an adjacency graph from a text file
 
 from graphviz_tree import *
+from common import *
 import sys, string
 
 table = str.maketrans({key: None for key in string.punctuation})
 
 fin = open(sys.argv[1], 'r')
-lines = fin.readlines()
-fin.close()
 
 gvt = GraphVizTree()
 

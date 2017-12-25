@@ -1,0 +1,87 @@
+//case2
+//case2
+//get_uncle:
+//self.value: APPLE
+//GP
+// <rb_tree.RBTree object at 0x7f1f1a5cd198>
+// <rb_tree.RBTree object at 0x7f1f1ac6fb00>
+//GP
+// <rb_tree.RBTree object at 0x7f1f1a5cd198>
+// <rb_tree.RBTree object at 0x7f1f1ac6fb00>
+//get_uncle:
+//self.value: APPLE
+//GP
+// <rb_tree.RBTree object at 0x7f1f1a5cd198>
+// <rb_tree.RBTree object at 0x7f1f1ac6fb00>
+//GP
+// <rb_tree.RBTree object at 0x7f1f1a5cd198>
+// <rb_tree.RBTree object at 0x7f1f1ac6fb00>
+// case 3!
+//get_uncle:
+//self.value: APPLE
+//GP
+// <rb_tree.RBTree object at 0x7f1f1a5cd198>
+// <rb_tree.RBTree object at 0x7f1f1ac6fb00>
+//GP
+// <rb_tree.RBTree object at 0x7f1f1a5cd198>
+// <rb_tree.RBTree object at 0x7f1f1ac6fb00>
+//GP
+// <rb_tree.RBTree object at 0x7f1f1a5cd198>
+// <rb_tree.RBTree object at 0x7f1f1ac6fb00>
+//case1
+//get_uncle:
+//self.value: APE
+//GP
+// <rb_tree.RBTree object at 0x7f1f1a5d9cf8>
+// <rb_tree.RBTree object at 0x7f1f1a5cd198>
+//GP
+// <rb_tree.RBTree object at 0x7f1f1a5d9cf8>
+// <rb_tree.RBTree object at 0x7f1f1a5cd198>
+//GP
+// <rb_tree.RBTree object at 0x7f1f1a5d9cf8>
+// <rb_tree.RBTree object at 0x7f1f1a5cd198>
+//GP
+// <rb_tree.RBTree object at 0x7f1f1a5d9cf8>
+// <rb_tree.RBTree object at 0x7f1f1a5cd198>
+//GP
+// <rb_tree.RBTree object at 0x7f1f1a5d9cf8>
+// <rb_tree.RBTree object at 0x7f1f1a5cd198>
+//GP
+// <rb_tree.RBTree object at 0x7f1f1a5d9cf8>
+// <rb_tree.RBTree object at 0x7f1f1a5cd198>
+//get_uncle:
+//self.value: OPERA
+//GP
+// <rb_tree.RBTree object at 0x7f1f1a5d9cf8>
+// <rb_tree.RBTree object at 0x7f1f1a5cd198>
+//GP
+// <rb_tree.RBTree object at 0x7f1f1a5d9cf8>
+// <rb_tree.RBTree object at 0x7f1f1a5cd198>
+//GP
+// <rb_tree.RBTree object at 0x7f1f1a5d9cf8>
+// <rb_tree.RBTree object at 0x7f1f1a5cd198>
+//GP
+// <rb_tree.RBTree object at 0x7f1f1a5d9cf8>
+// <rb_tree.RBTree object at 0x7f1f1a5cd198>
+//GP
+// <rb_tree.RBTree object at 0x7f1f1a5d9cf8>
+// <rb_tree.RBTree object at 0x7f1f1a5cd198>
+digraph {
+	ztigncxmeq [label=OR color=BLACK]
+	ztigmnrqds [label=OPPA color=BLACK]
+	ztigncxmeq -> ztigmnrqds
+	ztigmnupee [label=APPLE color=RED]
+	ztigmnrqds -> ztigmnupee
+	ztigmnupoy [label=APE color=RED]
+	ztigmnupee -> ztigmnupoy
+	ztigmnuoxs [label=OPERA color=RED]
+	ztigmnupee -> ztigmnuoxs
+	ztigmnqbzc [label=ORANGE color=BLACK]
+	ztigncxmeq -> ztigmnqbzc
+}
+// BLACK OR
+// BLACK OPPA
+// RED APPLE
+// RED APE
+// RED OPERA
+// BLACK ORANGE
