@@ -11,3 +11,17 @@ arguments for the Turing Machine
 
 `even-zeros.yml` (sic) is the Turing Machine source code for computing if there
 are an even number of zeros
+
+Here is a visual explanation of how the Turing Machine computes type:
+
+
+|0   |1   |2   |
+|----|----|----|
+|>>Fire<<|Grass|Bug|
+|{empty}|>>Grass<<|Bug|
+|{empty}|2|>>Bug<<|
+|{empty}|2|2|
+|{empty}|2|>>2<<|
+|{empty}|>>2<<|2|
+|{empty}|>>4<<|2|
+

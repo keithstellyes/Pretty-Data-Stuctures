@@ -14,12 +14,14 @@ class TuringMachine:
         self.states = states
         self.ftable = functional_statetrans_table(state_transitions)
 
-    def run_input(self, t):
+    def run_input(self, t, monitor_function=None):
         t = TuringMachineTape(iterable=t, default_letter=self.default_letter)
         self.state = self.init
         # in case someone wants to use this later :)
         self.tape = t
         while True:
+            if monitor_function is not None:
+                monitor_function(self)
             if self.state in self.accept:
                 return True
             if self.state in self.reject:
