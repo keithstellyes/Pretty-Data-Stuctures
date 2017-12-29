@@ -123,6 +123,9 @@ qCompute2:
 - if: '2'
   to: qAccept
   wr: '4'
+- if: ' '
+  tape: RIGHT
+  to: qAccept
 qComputeP5:
 - if: '0'
   to: qAccept
@@ -141,15 +144,12 @@ qComputeStart:
 - if: '0.5'
   tape: LEFT
   to: qComputeP5
-  wr: ' '
 - if: '1'
   tape: LEFT
   to: qCompute1
-  wr: ' '
 - if: '2'
   tape: LEFT
   to: qCompute2
-  wr: ' '
 qDark:
 - if: ' '
   tape: LEFT

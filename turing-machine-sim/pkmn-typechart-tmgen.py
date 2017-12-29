@@ -42,9 +42,9 @@ for attacking_type in types:
 # compute step
 d['qComputeStart'] = []
 d['qComputeStart'].append({'if':'0', 'to':'qAccept'})
-d['qComputeStart'].append({'if':'0.5', 'to':'qComputeP5', 'wr':' ', 'tape':'LEFT'})
-d['qComputeStart'].append({'if':'1', 'to':'qCompute1', 'wr':' ', 'tape':'LEFT'})
-d['qComputeStart'].append({'if':'2', 'to':'qCompute2', 'wr':' ', 'tape':'LEFT'})
+d['qComputeStart'].append({'if':'0.5', 'to':'qComputeP5', 'tape':'LEFT'})
+d['qComputeStart'].append({'if':'1', 'to':'qCompute1', 'tape':'LEFT'})
+d['qComputeStart'].append({'if':'2', 'to':'qCompute2', 'tape':'LEFT'})
 
 d['qComputeP5'] = []
 d['qComputeP5'].append({'if':'0', 'to':'qAccept'})
@@ -53,7 +53,6 @@ d['qComputeP5'].append({'if':'1', 'wr':'0.5', 'to':'qAccept'})
 d['qComputeP5'].append({'if':'2', 'wr': '1', 'to':'qAccept'})
 
 d['qCompute1'] = []
-
 for n in ('0', '0.5', '1', '2'):
     d['qCompute1'].append({'if':n, 'to':'qAccept'})
 
@@ -62,6 +61,7 @@ d['qCompute2'].append({'if':'0', 'to':'qAccept'})
 d['qCompute2'].append({'if':'0.5', 'wr':'1', 'to':'qAccept'})
 d['qCompute2'].append({'if':'1', 'wr':'2', 'to':'qAccept'})
 d['qCompute2'].append({'if':'2', 'wr':'4', 'to':'qAccept'})
+d['qCompute2'].append({'if':' ', 'tape':'RIGHT', 'to':'qAccept'})
 
 f = open('pkmntypes.yml', 'w')
 f.write(yaml.dump(d, default_flow_style=False))
