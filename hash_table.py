@@ -19,21 +19,36 @@ class HashTable:
         self.entry_count += 1
         self.buckets[self.hash(value) % bc].insert(value)
     def gv_serialize(self):
+       #t = Digraph()
+       #arr_label = '<0> 0'
+       #for i in range(1, len(self.buckets)):
+       #    arr_label += '| <{}> {} '.format(str(i), str(i))
+       #t.node('arr', arr_label, shape='record')
+       #for i in range(len(self.buckets)):
+       #    prev = 'arr:{}'.format(str(i))
+       #    for e in self.buckets[i]:
+       #        if e.value is None:
+       #            break
+       #        t.node(str(id(e)), e.value)
+       #        t.edge(prev, str(id(e)))
+       #        prev = str(id(e))
+       #return t.source
        t = Digraph()
-       arr_label = '<0> 0'
-       for i in range(1, len(self.buckets)):
-           arr_label += '| <{}> {} '.format(str(i), str(i))
-       t.node('arr', arr_label, shape='record')
-       for i in range(len(self.buckets)):
-           prev = 'arr:{}'.format(str(i))
-           for e in self.buckets[i]:
-               if e.value is None:
-                   break
-               t.node(str(id(e)), e.value)
-               t.edge(prev, str(id(e)))
-               prev = str(id(e))
-       return t.source
+       for i in range(0, len(self.buckets), 32):
+           arr_label = '<{}> {} '.format(str(i), str(i))
+           for j in range(i, min(i+32, len(self.buckets))):
+               arr_label += '| <{}> {} '.format(str(j), str(j))
+           t.node('arr{}'.format(str(i)), arr_label, shape='record')
+           for j in range(i, min(len(self.buckets), i+32)):
+               prev = 'arr{}:{}'.format(str(i), str(j))
+               for e in self.buckets[j]:
+                   if e.value is None:
+                       break
+                   t.node(str(id(e)), e.value)
+                   t.edge(prev, str(id(e)))
+                   prev = str(id(e))
 
+       return t.source
 def load_factor(entry_count, bucket_count):
     return entry_count / bucket_count
 
@@ -41,6 +56,18 @@ def djb2_hash(s):
     h = 5381
     for i in range(len(s)):
         h = ((h << 5) + h) + ord(s[i])
+    return h
+
+def jenkins_oneatatime_hash(s):
+    h = 0
+    for i in range(len(s)):
+        h += ord(s[i])
+        h += (h << 10)
+        h ^= (h >> 6)
+    h += (h << 3)
+    h ^= (h >> 11)
+    h += (h << 15)
+
     return h
 
 class HashTableEntry:

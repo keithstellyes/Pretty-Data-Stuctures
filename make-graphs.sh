@@ -17,7 +17,13 @@ dot bs_rt.dot -T png -o bs_rt.png
 python3 bst-from-file.py basicstrings > bs_bst.dot
 dot bs_bst.dot -T png -o bs_bst.png
 
+# make our neat Turing Machine for Even Zeroes
+cd turing-machine-sim
+python3 evz.py > evz.dot && dot evz.dot -T png -o evz.png
+cd ..
+
 xdg-open trie.png
 xdg-open bs_rt.png
 xdg-open bs_bst.png
 # xdg-open coc_trie.svg
+xdg-open turing-machine-sim/evz.png

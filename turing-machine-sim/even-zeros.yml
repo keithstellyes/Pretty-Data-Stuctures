@@ -1,0 +1,35 @@
+#Input: binary number n
+#Accept if n is even number
+init: qEven
+accept: qAccept
+reject: qReject
+
+# final letter is the default/blank character
+alphabet: ['0', '1', ' ']
+
+qEven:
+        - if: 0
+          wr: ' '
+          to: qOdd
+          tape: RIGHT
+        
+        - if: 1
+          wr: ' '
+          to: qEven
+          tape: RIGHT
+        
+        - if: ' '
+          to: qAccept
+qOdd:
+        - if: 0
+          wr: ' '
+          to: qEven
+          tape: RIGHT
+
+        - if: 1
+          wr: ' '
+          to: qOdd
+          tape: RIGHT
+
+        - if: ' '
+          to: qReject

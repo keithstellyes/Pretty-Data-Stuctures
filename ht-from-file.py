@@ -4,7 +4,8 @@ from common import *
 import string
 
 f = open(sys.argv[1], 'r')
-t = HashTable(max_load_factor=2/3, hash_function=djb2_hash)
+hash_function = jenkins_oneatatime_hash
+t = HashTable(max_load_factor=2/3, hash_function=hash_function)
 
 table = str.maketrans({key: None for key in string.punctuation})
 

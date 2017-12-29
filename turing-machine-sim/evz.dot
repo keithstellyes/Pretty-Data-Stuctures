@@ -1,0 +1,12 @@
+digraph {
+	qEven
+	qOdd
+	qAccept [color=green shape=triangle]
+	qReject [color=red shape=triangle]
+	qEven -> qOdd [label="0;RIGHT"]
+	qEven -> qEven [label="1;RIGHT"]
+	qEven -> qAccept [label="{empty}"]
+	qOdd -> qEven [label="0;RIGHT"]
+	qOdd -> qOdd [label="1;RIGHT"]
+	qOdd -> qReject [label="{empty}"]
+}

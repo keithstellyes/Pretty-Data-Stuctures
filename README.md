@@ -12,6 +12,7 @@ implementing common data structures that can serialize to GraphViz DOT files.
 | Zombie Highway Graph from Reddit's r/dailyprogrammer| DONE|
 | Markov Chain | DONE|
 | Hash Table | Done|
+| Turing Machines | DONE|
 
 AVL Tree insertion via: 
 https://www.geeksforgeeks.org/avl-tree-set-1-insertion/

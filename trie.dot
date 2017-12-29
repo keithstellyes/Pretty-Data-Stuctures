@@ -9,15 +9,11 @@ digraph {
     h [label="P"];
     i [label="P"];
     j [label="A", shape=box];
-    k [label="E"];
-    l [label="R"];
-    m [label="A", shape=box];
-    n [label="A"];
-    o [label="P"];
-    p [label="P"];
-    q [label="L"];
-    r [label="E", shape=box];
-    s [label="E", shape=box];
+    k [label="A"];
+    l [label="P"];
+    m [label="P", shape=box];
+    n [label="L"];
+    o [label="E", shape=box];
     f -> g
     e -> f
     d -> e
@@ -25,15 +21,11 @@ digraph {
     b -> c
     i -> j
     h -> i
-    l -> m
-    k -> l
-    h -> k
     b -> h
     a -> b
-    q -> r
-    p -> q
-    o -> p
-    o -> s
     n -> o
-    a -> n
+    m -> n
+    l -> m
+    k -> l
+    a -> k
 }
