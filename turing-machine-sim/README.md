@@ -16,13 +16,13 @@ Here is a visual explanation of how the Turing Machine computes type:
 
 (For Fire attacking Grass/Bug)
 
-|0   |1   |2   |
-|----|----|----|
-|>>Fire<<|Grass|Bug|
-|{empty}|>>Grass<<|Bug|
-|{empty}|2|>>Bug<<|
-|{empty}|2|2|
-|{empty}|2|>>2<<|
-|{empty}|>>2<<|2|
-|{empty}|>>4<<|2|
+|State|0   |1   |2   |
+|-----|----|----|----|
+|>>qReadMove<<|Fire|Grass|Bug|
+|qFire|>>{empty}<<|Grass|Bug|
+|qFire|{empty}|>>2<<|Bug|
+|qFire|{empty}|2|>>2<<|
+|qComputeStart|{empty}|>>2<<|2|
+|qCompute2|>>{empty}<<|2|2|
+|qAccept|>>{empty}<<|4|2|
 

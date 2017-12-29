@@ -2,7 +2,7 @@ import turing_machine
 import sys
 
 def build_md_table(machine, data):
-    data.append({'cols':machine.tape[0:3], 'ptr':machine.tape.head})
+    data.append({'cols':[machine.state] + machine.tape[0:3], 'ptr':machine.tape.head})
 
 def finalize_md_table(data):
     def s2(s):
@@ -10,8 +10,8 @@ def finalize_md_table(data):
             return '{empty}'
         return str(s)
 
-    print('|0   |1   |2   |')
-    print('|----|----|----|')
+    print('|State|0   |1   |2   |')
+    print('|-----|----|----|----|')
     for datum in data:
         row = [s2(c) for c in datum['cols']]
         try:
