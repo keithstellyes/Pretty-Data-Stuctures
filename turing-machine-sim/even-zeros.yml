@@ -7,6 +7,12 @@ reject: qReject
 # final letter is the default/blank character
 alphabet: ['0', '1', ' ']
 
+# A series of state-transitions
+# this is for if we're at qEven
+#     if: the string at our tape head
+#     wr: string to write (optional)
+#     to: state to go to (required)
+#     tape: direction to move our tape (optional)
 qEven:
         - if: 0
           wr: ' '
