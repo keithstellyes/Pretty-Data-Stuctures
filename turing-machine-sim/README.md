@@ -18,11 +18,11 @@ Here is a visual explanation of how the Turing Machine computes type:
 
 |State|0   |1   |2   |
 |-----|----|----|----|
-|>>qReadMove<<|Fire|Grass|Bug|
-|qFire|>>{empty}<<|Grass|Bug|
-|qFire|{empty}|>>2<<|Bug|
-|qFire|{empty}|2|>>2<<|
-|qComputeStart|{empty}|>>2<<|2|
-|qCompute2|>>{empty}<<|2|2|
-|qAccept|>>{empty}<<|4|2|
+|qReadMove|>>Fire<<|Grass|Bug|
+|qFire|{empty}|>>Grass<<|Bug|
+|qFire|{empty}|2|>>Bug<<|
+|qFire|{empty}|2|2|
+|qComputeStart|{empty}|2|>>2<<|
+|qCompute2|{empty}|>>2<<|2|
+|qAccept|{empty}|>>4<<|2|
 

@@ -15,7 +15,8 @@ def finalize_md_table(data):
     for datum in data:
         row = [s2(c) for c in datum['cols']]
         try:
-            row[datum['ptr']] = '>>' + row[datum['ptr']] + '<<'
+            ptr = datum['ptr'] + 1
+            row[ptr] = '>>' + row[ptr] + '<<'
         except IndexError:
             pass
         print('|' + '|'.join(row) + '|')
