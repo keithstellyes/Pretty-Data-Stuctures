@@ -17,12 +17,15 @@ class TuringMachine:
     def run_input(self, t):
         t = TuringMachineTape(iterable=t, default_letter=self.default_letter)
         self.state = self.init
+        # in case someone wants to use this later :)
+        self.tape = t
         while True:
             if self.state in self.accept:
                 return True
             if self.state in self.reject:
                 return False
             self.state = self.ftable[self.state][t.read()](t=t, m=self)
+        # safe if someone wants to peep
     def gv_serialize(self):
         dg = Digraph()
         for s in self.states:

@@ -1,0 +1,20 @@
+so we can do our serialization where we have our states
+
+#define qEven
+#define qOdd
+#define INITIAL_STATE
+
+Our alphabet table:
+
+/* starting with inital/blank */
+char alphabet[][] = {" ", "0", "1"}
+
+For simplicity's sake, using a linked list
+
+struct node {
+    int value;
+    node *next;
+    node *prev;
+}
+
+a constructor taking in a file
