@@ -14,6 +14,7 @@ are an even number of zeros
 
 Here is a visual explanation of how the Turing Machine computes type:
 
+(For Fire attacking Grass/Bug)
 
 |0   |1   |2   |
 |----|----|----|
