@@ -27,3 +27,6 @@ xdg-open bs_rt.png
 xdg-open bs_bst.png
 # xdg-open coc_trie.svg
 xdg-open turing-machine-sim/evz.png
+
+mv *.dot output/
+mv *.png output/

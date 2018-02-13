@@ -1,5 +1,4 @@
-#import turing_machine
-from cturingmachine import turing_machine
+import turing_machine
 import sys
 from numba import jit
 

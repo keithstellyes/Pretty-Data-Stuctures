@@ -2,6 +2,12 @@
 allstar*
 badromance*
 
+# other gen'd files
+out.v
+a.out
+*.svg
+*.png
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

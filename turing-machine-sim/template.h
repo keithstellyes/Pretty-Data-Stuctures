@@ -122,13 +122,15 @@ void write_tape_to_file(tm_node *n, int lindex, int rindex,
 		        FILE *fp, char *trans_table)
 {
     fprintf(fp, "%d:\n", index);
-    while(lindex++ < rindex) {
+    while(lindex++ < rindex && n != NULL) {
         fprintf(fp, "%c", trans_table[n->value]);
         n = n->next;
     }
 }
 
-tm_node *read_tape_from_stdin
+tm_node *read_tape_from_file(FILE *fin, char *translation_table)
+{
+}
 #endif
 
 #ifdef EXAMPLE

@@ -13,6 +13,7 @@ implementing common data structures that can serialize to GraphViz DOT files.
 | Markov Chain | DONE|
 | Hash Table | Done|
 | Turing Machines | DONE|
+| Regex to NFA to DFA | DONE |
 
 AVL Tree insertion via: 
 https://www.geeksforgeeks.org/avl-tree-set-1-insertion/

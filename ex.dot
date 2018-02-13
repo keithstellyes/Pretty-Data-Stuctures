@@ -1,7 +1,0 @@
-digraph {
-    n [shape=record, label="{ Alice | Bob | John | Jane }"]
-    n2 [shape=record, label="<Joe> Joe | <Jack> Jack | <0> 0"]
-    n2:Joe -> JoeSon
-    n2:Jack -> JackSon
-    n2:0 -> ZeroPlusOne
-}
